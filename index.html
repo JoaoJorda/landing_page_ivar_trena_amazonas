@@ -1,0 +1,2091 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trena Amazonas LTDA - Consultoria e Engenharia de Projetos | Topografia e Georreferenciamento</title>
+    <meta name="description" content="Há mais de 25 anos oferecemos serviços especializados em topografia, terraplanagem, drenagem e pavimentação em toda região Norte do Brasil. Solicite seu orçamento hoje!">
+    <meta name="keywords" content="topografia, georreferenciamento, terraplanagem, drenagem, pavimentação, engenharia, consultoria, Amazonas, Norte Brasil">
+    <meta property="og:title" content="Trena Amazonas LTDA - Consultoria e Engenharia de Projetos">
+    <meta property="og:description" content="Há mais de 25 anos oferecemos serviços especializados em topografia, terraplanagem, drenagem e pavimentação.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="https://s3.joaojordaoia.shop/ivar/favicon.ico">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Trena Amazonas LTDA",
+        "description": "Consultoria e Engenharia de Projetos especializada em topografia, terraplanagem, drenagem e pavimentação",
+        "url": "https://trenaamazonas.com.br",
+        "telephone": "+55-92-99999-9999",
+        "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "AM",
+            "addressCountry": "BR"
+        },
+        "areaServed": "Norte do Brasil",
+        "serviceType": ["Topografia", "Georreferenciamento", "Terraplanagem", "Drenagem", "Pavimentação"]
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary-green: #2E7D32;
+            --primary-green-light: #4CAF50;
+            --primary-green-dark: #1B5E20;
+            --secondary-white: #FFFFFF;
+            --text-dark: #111111;
+            --text-gray: #666666;
+            --text-light: #999999;
+            --bg-light: #F8F9FA;
+            --border-light: #E0E0E0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ============ NAVIGATION ============ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-light);
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            background: var(--secondary-white);
+            box-shadow: var(--shadow);
+            padding: 0.75rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+
+        .nav-cta-btn {
+            display: none;
+            background: var(--primary-green);
+            color: var(--secondary-white);
+            padding: 0.625rem 1.25rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-decoration: none;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .nav-cta-btn:hover {
+            background: var(--primary-green-dark);
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 3px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 8px;
+            transition: var(--transition);
+            width: 44px;
+            height: 44px;
+        }
+
+        .mobile-menu:hover {
+            background: var(--bg-light);
+        }
+
+        .mobile-menu span {
+            width: 20px;
+            height: 2px;
+            background: var(--text-dark);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .mobile-menu.active span:nth-child(1) {
+            transform: rotate(45deg) translateY(5px);
+        }
+
+        .mobile-menu.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu.active span:nth-child(3) {
+            transform: rotate(-45deg) translateY(-5px);
+        }
+
+        /* Mobile Menu */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 300px;
+            height: 100vh;
+            background: var(--secondary-white);
+            box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+            z-index: 1001;
+            transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow-y: auto;
+        }
+
+        .mobile-nav.active {
+            right: 0;
+        }
+
+        .mobile-nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border-light);
+            background: var(--bg-light);
+        }
+
+        .mobile-nav-header .logo {
+            font-size: 1.25rem;
+        }
+
+        .mobile-nav-close {
+            background: var(--secondary-white);
+            border: 1px solid var(--border-light);
+            font-size: 1.25rem;
+            cursor: pointer;
+            color: var(--text-gray);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .mobile-nav-close:hover {
+            background: var(--primary-green);
+            color: var(--secondary-white);
+            border-color: var(--primary-green);
+        }
+
+        .mobile-nav-content {
+            padding: 2rem 1.5rem;
+        }
+
+        .mobile-nav-links {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .mobile-nav-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .mobile-nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 1.1rem;
+            display: block;
+            padding: 1rem 1.25rem;
+            border-radius: 12px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .mobile-nav-links a:hover {
+            background: var(--bg-light);
+            color: var(--primary-green);
+            transform: translateX(8px);
+        }
+
+        .mobile-nav-cta .cta-primary {
+            width: 100%;
+            text-align: center;
+            padding: 1rem;
+            font-size: 1rem;
+            border-radius: 12px;
+            margin: 0;
+        }
+
+        .mobile-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(2px);
+        }
+
+        .mobile-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* ============ HERO SECTION ============ */
+        .hero {
+            padding: 100px 0 60px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e8 100%);
+            position: relative;
+            overflow: hidden;
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:%232E7D32;stop-opacity:0.1"/><stop offset="100%" style="stop-color:%232E7D32;stop-opacity:0"/></radialGradient></defs><circle cx="200" cy="200" r="200" fill="url(%23a)"/><circle cx="800" cy="800" r="300" fill="url(%23a)"/></svg>') no-repeat center center;
+            background-size: cover;
+            opacity: 0.3;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 100%;
+        }
+
+        .hero-headline {
+            font-size: clamp(1.75rem, 7vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease 0.2s both;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-subheadline {
+            font-size: clamp(1rem, 3.5vw, 1.25rem);
+            color: var(--text-gray);
+            font-weight: 500;
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 0.8s ease 0.4s both;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+        }
+
+        .hero-ctas {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            animation: fadeInUp 0.8s ease 0.6s both;
+            align-items: center;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .hero-mockup {
+            width: 100%;
+            max-width: 500px;
+            height: 400px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            overflow: hidden;
+            margin: 2rem auto 0;
+        }
+
+        .hero-mockup img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .cta-primary {
+            background: var(--primary-green);
+            color: var(--secondary-white);
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            min-width: 280px;
+        }
+
+        .cta-primary:hover {
+            background: var(--primary-green-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cta-large {
+            font-size: 1.1rem;
+            padding: 1.25rem 2.5rem;
+            min-width: 320px;
+        }
+
+        /* ============ SECTION UTILITIES ============ */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-lg {
+            padding: 80px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            width: 100%;
+        }
+
+        .section-title {
+            font-size: clamp(1.75rem, 5vw, 2.5rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            color: var(--text-dark);
+            line-height: 1.3;
+        }
+
+        .section-subtitle {
+            font-size: clamp(1.125rem, 3vw, 1.375rem);
+            font-weight: 600;
+            color: var(--primary-green);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .section-text {
+            color: var(--text-gray);
+            line-height: 1.7;
+            font-size: 1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            text-align: center;
+        }
+
+        /* ============ QUEM SOMOS ============ */
+        .quem-somos {
+            background: var(--secondary-white);
+        }
+
+        .quem-somos-content {
+            text-align: center;
+        }
+
+        .quem-somos-main-image {
+            width: 100%;
+            max-width: 500px;
+            height: 400px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            margin: 2rem auto 0;
+        }
+
+        .quem-somos-main-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .quem-somos-card {
+            background: var(--bg-light);
+            padding: 2rem 1.5rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            margin-top: 2rem;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .quem-somos-image {
+            width: 100%;
+            max-width: 300px;
+            height: 200px;
+            margin: 0 auto 1.5rem;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .quem-somos-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .quem-somos-card h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        .quem-somos-card p {
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        /* ============ FUNDADOR ============ */
+        .fundador {
+            background: var(--bg-light);
+        }
+
+        .fundador-content {
+            text-align: center;
+        }
+
+        .fundador-main-image {
+            width: 100%;
+            max-width: 500px;
+            height: 400px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            margin: 2rem auto 0;
+        }
+
+        .fundador-main-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ============ CREDIBILITY LOGOS ============ */
+        .credibility {
+            background: var(--secondary-white);
+            overflow: hidden;
+        }
+
+        .credibility-title {
+            text-align: center;
+            font-size: clamp(1.125rem, 3vw, 1.375rem);
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+        }
+
+        .logos-carousel {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .logos-track {
+            display: inline-flex;
+            animation: scrollLogos 20s linear infinite;
+            gap: 1rem;
+        }
+
+        .logo-item {
+            flex: 0 0 auto;
+            width: 140px;
+            height: 80px;
+            background: var(--secondary-white);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--border-light);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: var(--primary-green);
+        }
+
+        .logo-placeholder {
+            font-weight: 600;
+            color: var(--text-gray);
+            text-align: center;
+            font-size: 0.875rem;
+        }
+
+        .logo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        @keyframes scrollLogos {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .logos-carousel:hover .logos-track {
+            animation-play-state: paused;
+        }
+
+        /* ============ SERVIÇOS ============ */
+        .servicos {
+            background: var(--secondary-white);
+        }
+
+        .servicos-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .servico-card {
+            background: var(--bg-light);
+            padding: 2rem 1.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 320px;
+        }
+
+        .servico-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .servico-image {
+            margin-bottom: 1.5rem;
+        }
+
+        .servico-icon {
+            width: 200px;
+            height: 80px;
+            background: var(--primary-green);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            font-size: 2rem;
+            color: var(--secondary-white);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .servico-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .servico-card h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .servico-card p {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            flex-grow: 1;
+            font-size: 0.95rem;
+        }
+
+        .servico-card .cta-primary {
+            padding: 0.875rem 1.5rem;
+            font-size: 0.9rem;
+            align-self: center;
+            width: fit-content;
+            min-width: auto;
+        }
+
+        /* ============ PORTFOLIO ============ */
+        .portfolio {
+            background: var(--bg-light);
+        }
+
+        .portfolio-carousel {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 2rem;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            position: relative;
+            aspect-ratio: 16/10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary-white);
+            font-size: 1rem;
+            text-align: center;
+            padding: 1.5rem;
+            overflow: hidden;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .carousel-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: var(--secondary-white);
+            padding: 2rem 1.5rem 1.5rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            z-index: 2;
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.9);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.25rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-nav:hover {
+            background: var(--secondary-white);
+            box-shadow: var(--shadow);
+        }
+
+        .carousel-prev {
+            left: 15px;
+        }
+
+        .carousel-next {
+            right: 15px;
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--border-light);
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .carousel-dot.active {
+            background: var(--primary-green);
+        }
+
+        .portfolio-cta {
+            text-align: center;
+        }
+
+        /* ============ TESTIMONIALS ============ */
+        .testimonials {
+            background: var(--secondary-white);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        .testimonial {
+            background: var(--bg-light);
+            padding: 2rem 1.5rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 3rem;
+            color: var(--primary-green);
+            font-weight: bold;
+        }
+
+        .testimonial-text {
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-green);
+            font-size: 0.9rem;
+        }
+
+        .testimonials-cta {
+            text-align: center;
+        }
+
+        /* ============ FAQ ============ */
+        .faq {
+            background: var(--bg-light);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .faq-item {
+            background: var(--secondary-white);
+            margin-bottom: 1rem;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.25rem;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            transition: var(--transition);
+            line-height: 1.4;
+            gap: 1rem;
+        }
+
+        .faq-question:hover {
+            background: var(--bg-light);
+        }
+
+        .faq-answer {
+            padding: 0 1.25rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-answer.active {
+            padding: 0 1.25rem 1.25rem;
+            max-height: 200px;
+        }
+
+        .faq-icon {
+            transition: var(--transition);
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .faq-icon.active {
+            transform: rotate(180deg);
+        }
+
+        /* ============ FINAL CTA ============ */
+        .final-cta {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-green-dark) 100%);
+            color: var(--secondary-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="100" cy="100" r="100" fill="rgba(255,255,255,0.1)"/><circle cx="900" cy="900" r="150" fill="rgba(255,255,255,0.05)"/></svg>') no-repeat;
+            animation: float 15s ease-in-out infinite reverse;
+        }
+
+        .final-cta-container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: clamp(1.75rem, 5vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .final-cta p {
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            line-height: 1.5;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta .cta-primary {
+            background: var(--secondary-white);
+            color: var(--primary-green);
+            font-size: 1.1rem;
+            padding: 1.25rem 2.5rem;
+        }
+
+        .final-cta .cta-primary:hover {
+            background: var(--bg-light);
+            transform: translateY(-3px);
+        }
+
+        /* ============ FOOTER ============ */
+        .footer {
+            background: var(--text-dark);
+            color: var(--secondary-white);
+            padding: 3rem 0 2rem;
+        }
+
+        .footer-container {
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        .footer-copyright {
+            border-top: 1px solid #333;
+            padding-top: 1rem;
+            margin-top: 2rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .privacy-link {
+            color: var(--text-light);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .privacy-link:hover {
+            opacity: 1;
+            color: var(--primary-green);
+        }
+
+        /* ============ MODALS ============ */
+        .privacy-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 10000;
+            overflow-y: auto;
+        }
+
+        .privacy-modal.active {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .privacy-content {
+            background: var(--secondary-white);
+            border-radius: 12px;
+            max-width: 800px;
+            width: 100%;
+            margin: 2rem auto;
+            box-shadow: var(--shadow-lg);
+            animation: fadeInUp 0.3s ease;
+        }
+
+        .privacy-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .privacy-header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .privacy-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-gray);
+            transition: var(--transition);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .privacy-close:hover {
+            color: var(--text-dark);
+            background: var(--bg-light);
+        }
+
+        .privacy-body {
+            padding: 1.5rem;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+
+        .privacy-section {
+            margin-bottom: 2rem;
+        }
+
+        .privacy-section h2 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        .privacy-section p {
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .privacy-section ul {
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-left: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .privacy-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* ============ ANIMATIONS ============ */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============ RESPONSIVE DESIGN ============ */
+        
+        /* Small Mobile */
+        @media (max-width: 374px) {
+            .nav-container {
+                padding: 0 0.75rem;
+            }
+
+            .hero-container,
+            .container {
+                padding: 0 0.75rem;
+            }
+
+            .logo {
+                font-size: 1rem;
+            }
+
+            .logo img {
+                height: 32px;
+            }
+
+            .hero-headline {
+                font-size: clamp(1.5rem, 8vw, 2.5rem);
+            }
+
+            .section-title {
+                font-size: clamp(1.5rem, 7vw, 2rem);
+            }
+        }
+
+        /* Tablet */
+        @media (min-width: 768px) {
+            .nav-container {
+                padding: 0 2rem;
+            }
+
+            .nav-links {
+                display: flex;
+            }
+
+            .nav-cta-btn {
+                display: inline-block;
+            }
+
+            .mobile-menu {
+                display: none;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .logo img {
+                height: 50px;
+            }
+
+            .hero {
+                padding: 120px 0 80px;
+            }
+
+            .hero-container,
+            .container {
+                padding: 0 2rem;
+            }
+
+            .hero-ctas {
+                flex-direction: row;
+                justify-content: center;
+                max-width: none;
+            }
+
+            .section {
+                padding: 80px 0;
+            }
+
+            .section-lg {
+                padding: 100px 0;
+            }
+
+            .servicos-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 900px;
+                gap: 2.5rem;
+            }
+
+            .servico-card {
+                min-height: 340px;
+            }
+
+            .servico-icon {
+                width: 220px;
+                height: 90px;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 900px;
+            }
+
+            .logos-track {
+                gap: 1.5rem;
+            }
+
+            .logo-item {
+                width: 200px;
+                height: 120px;
+            }
+
+            .carousel-nav {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+
+            .carousel-prev {
+                left: 20px;
+            }
+
+            .carousel-next {
+                right: 20px;
+            }
+
+            .carousel-caption {
+                padding: 2rem;
+                font-size: 1rem;
+            }
+        }
+
+        /* Desktop */
+        @media (min-width: 1024px) {
+            .navbar {
+                padding: 1rem 0;
+            }
+
+            .hero {
+                padding: 150px 0 100px;
+                min-height: 80vh;
+            }
+
+            .hero-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+                align-items: center;
+                text-align: left;
+            }
+
+            .hero-content {
+                order: 1;
+            }
+
+            .hero-ctas {
+                justify-content: flex-start;
+            }
+
+            .hero-image {
+                order: 2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .hero-mockup {
+                margin-top: 0;
+            }
+
+            .quem-somos-content {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+                align-items: center;
+                text-align: left;
+            }
+
+            .quem-somos-text {
+                order: 2;
+            }
+
+            .quem-somos-image-container {
+                order: 1;
+            }
+
+            .quem-somos-main-image {
+                margin-top: 0;
+            }
+
+            .quem-somos-card {
+                margin-top: 2rem;
+                margin-left: 0;
+                margin-right: 0;
+                max-width: none;
+            }
+
+            .section-text {
+                text-align: left;
+                margin: 0 0 2rem 0;
+            }
+
+            .section-subtitle {
+                text-align: left;
+            }
+
+            .servicos-grid {
+                grid-template-columns: repeat(3, 1fr);
+                max-width: 1200px;
+                gap: 2.5rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: repeat(3, 1fr);
+                max-width: 1200px;
+            }
+
+            .servico-icon {
+                width: 240px;
+                height: 100px;
+            }
+
+            .fundador-content {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+                align-items: center;
+                text-align: left;
+            }
+
+            .fundador-text {
+                order: 1;
+            }
+
+            .fundador-image-container {
+                order: 2;
+            }
+
+            .fundador-main-image {
+                margin-top: 0;
+            }
+        }
+
+        /* Large Desktop */
+        @media (min-width: 1200px) {
+            .servicos-grid {
+                max-width: 1200px;
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* Focus styles */
+        button:focus,
+        a:focus {
+            outline: 2px solid var(--primary-green);
+            outline-offset: 2px;
+        }
+
+        /* High contrast mode */
+        @media (prefers-contrast: high) {
+            :root {
+                --text-gray: #000000;
+                --border-light: #000000;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="https://s3.joaojordaoia.shop/ivar/logo_site-removebg-preview.png" alt="Trena Amazonas LTDA">
+                Trena Amazonas 
+            </a>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <a href="https://wa.me/5531995968189?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento." class="nav-cta-btn">Comece Seu Projeto</a>
+            <button class="mobile-menu" aria-label="Menu mobile" onclick="openMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-overlay" id="mobileOverlay" onclick="closeMobileMenu()"></div>
+    <nav class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <a href="#" class="logo">
+                <img src="https://s3.joaojordaoia.shop/ivar/logo_site-removebg-preview.png" alt="Trena Amazonas LTDA">
+                Trena Amazonas
+            </a>
+            <button class="mobile-nav-close" onclick="closeMobileMenu()">&times;</button>
+        </div>
+        <div class="mobile-nav-content">
+            <ul class="mobile-nav-links">
+                <li><a href="#inicio" onclick="closeMobileMenu()">🏠 Início</a></li>
+                <li><a href="#sobre" onclick="closeMobileMenu()">ℹ️ Sobre</a></li>
+                <li><a href="#servicos" onclick="closeMobileMenu()">🔧 Serviços</a></li>
+                <li><a href="#portfolio" onclick="closeMobileMenu()">📁 Portfólio</a></li>
+                <li><a href="#contato" onclick="closeMobileMenu()">📞 Contato</a></li>
+            </ul>
+            <div class="mobile-nav-cta">
+                <a href="https://wa.me/5531995968189?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento." class="cta-primary" onclick="closeMobileMenu()">Solicitar Orçamento ➜</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. INÍCIO - Hero Section -->
+    <section class="hero section-lg" id="inicio">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-headline fade-in">Consultoria e Engenharia de Projetos</h1>
+                <p class="hero-subheadline fade-in">TOPOGRAFIA, TERRAPLANAGEM, DRENAGEM E PAVIMENTAÇÃO</p>
+                <div class="hero-ctas fade-in">
+                    <a href="https://wa.me/5531995968189?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento." class="cta-primary cta-large">Solicite agora mesmo um orçamento ➜</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-mockup">
+                    <img src="https://s3.joaojordaoia.shop/ivar/inicio.jpg" alt="Projetos de Engenharia com Precisão Total">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. SOBRE - Quem Somos Section -->
+    <section class="quem-somos section-lg" id="sobre">
+        <div class="container">
+            <h2 class="section-title fade-in">Quem Somos</h2>
+            <div class="quem-somos-content">
+                <div class="quem-somos-image-container">
+                    <div class="quem-somos-main-image fade-in">
+                        <img src="https://s3.joaojordaoia.shop/ivar/IMG-20220115-WA0063%20%281%29.jpg" alt="Trena Amazonas - 25+ Anos de Experiência">
+                    </div>
+                </div>
+                <div class="quem-somos-text">
+                    <h3 class="section-subtitle fade-in">Especialistas em Topografia e Georreferenciamento</h3>
+                    <p class="section-text fade-in">
+                        A Trena Amazonas LTDA é uma empresa especializada em consultoria e engenharia de projetos, 
+                        atuando há mais de 25 anos no mercado. Oferecemos soluções completas em topografia, 
+                        terraplanagem, drenagem e pavimentação para toda a região Norte do Brasil.
+                    </p>
+                    <p class="section-text fade-in">
+                        Nossa equipe é formada por profissionais altamente qualificados e utilizamos equipamentos 
+                        de última geração para garantir a máxima precisão em todos os nossos projetos.
+                    </p>
+                    <a href="https://wa.me/5531995968189?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento." class="cta-primary fade-in">Conheça Nossos Serviços ➜</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção do Fundador -->
+    <section class="fundador section-lg">
+        <div class="container">
+            <h2 class="section-title fade-in">Fundador</h2>
+            <div class="fundador-content">
+                <div class="fundador-text">
+                    <h3 class="section-subtitle fade-in">Irvar de Godoy Barbosa</h3>
+                    <p class="section-text fade-in">
+                        Engenheiro Civil, Especialista em Topografia, Licenciado em Geografia e Técnico em Estrada. 
+                        Com décadas de experiência no setor, lidera nossa missão de fornecer soluções dentro da construção 
+                        civil utilizando técnicas construtivas de terraplanagem e projetos.
+                    </p>
+                    <p class="section-text fade-in">
+                        Garantindo que as expectativas de nossos clientes sejam superadas levando em conta questões 
+                        ambientais e de segurança, sempre com a máxima precisão técnica e compromisso profissional.
+                    </p>
+                    <a href="https://wa.me/5531995968189?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento." class="cta-primary fade-in">Entre em Contato ➜</a>
+                </div>
+                <div class="fundador-image-container">
+                    <div class="fundador-main-image fade-in">
+                        <img src="https://s3.joaojordaoia.shop/ivar/FOTO%20IVAR.jpg" alt="Irvar de Godoy Barbosa - Fundador">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SERVIÇOS - Nossos Serviços Section -->
+    <section class="servicos section-lg" id="servicos">
+        <div class="container">
+            <h2 class="section-title fade-in">Nossos Serviços</h2>
+            
+            <div class="servicos-grid">
+                <div class="servico-card fade-in">
+                    <div class="servico-image">
+                        <div class="servico-icon">
+                            <img src="https://s3.joaojordaoia.shop/ivar/LEVANTAMENTO%20TOPOGRAFICO.jpg" alt="Levantamento Topográfico">
+                        </div>
+                    </div>
+                    <h4>Levantamento Topográfico</h4>
+                    <p>Realizamos levantamentos topográficos com equipamentos de alta precisão, garantindo dados confiáveis para seu projeto de construção ou regularização.</p>
+                    <a href="https://wa.me/5531995968189?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento." class="cta-primary">Solicitar Orçamento ➜</a>
+                </div>
+                
+                <div class="servico-card fade-in">
+                    <div class="servico-image">
+                        <div class="servico-icon">
+                            <img src="https://s3.joaojordaoia.shop/ivar/GEO.jpg" alt="Georreferenciamento">
+                        </div>
+                    </div>
+                    <h4>Georreferenciamento</h4>
+                    <p>Serviços completos de georreferenciamento para regularização de imóveis rurais junto ao INCRA, com toda documentação necessária.</p>
+                    <a href="https://wa.me/5531995968189?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento." class="cta-primary">Solicitar Orçamento ➜</a>
+                </div>
+                
+                <div class="servico-card fade-in">
+                    <div class="servico-image">
+                        <div class="servico-icon">
+                            <img src="https://s3.joaojordaoia.shop/ivar/Terraplanagem.jpg" alt="Terraplanagem">
+                        </div>
+                    </div>
+                    <h4>Terraplanagem</h4>
+                    <p>Projetos de terraplanagem e movimentação de terra com planejamento técnico detalhado, otimizando custos e prazos de execução.</p>
+                    <a href="https://wa.me/5531995968189?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento." class="cta-primary">Solicitar Orçamento ➜</a>
+                </div>
+                
+                <div class="servico-card fade-in">
+                    <div class="servico-image">
+                        <div class="servico-icon">
+                            <img src="https://s3.joaojordaoia.shop/ivar/DRENAGEM.jpg" alt="Drenagem e Pavimentação">
+                        </div>
+                    </div>
+                    <h4>Drenagem e Pavimentação</h4>
+                    <p>Soluções completas em sistemas de drenagem e projetos de pavimentação, prevenindo alagamentos e garantindo durabilidade.</p>
+                    <a href="https://wa.me/5531995968189?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento." class="cta-primary">Solicitar Orçamento ➜</a>
+                </div>
+                
+                <div class="servico-card fade-in">
+                    <div class="servico-image">
+                        <div class="servico-icon">
+                            <img src="https://s3.joaojordaoia.shop/ivar/batimetria.jpg" alt="Batimetria">
+                        </div>
+                    </div>
+                    <h4>Batimetria</h4>
+                    <p>Levantamento batimétrico de corpos d'água, rios, lagos e reservatórios, fornecendo dados precisos sobre profundidade e topografia subaquática.</p>
+                    <a href="https://wa.me/5531995968189?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento." class="cta-primary">Solicitar Orçamento ➜</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PORTFÓLIO - Portfolio Section -->
+    <section class="portfolio section-lg" id="portfolio">
+        <div class="container">
+            <h2 class="section-title fade-in">Nossos Projetos</h2>
+            <div class="portfolio-carousel">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide">
+                        <img src="https://s3.joaojordaoia.shop/ivar/AEROPORTO%20EDUARDO%20GOMES%203.JPG" alt="Aeroporto Eduardo Gomes">
+                        <div class="carousel-caption">
+                            Levantamento Topográfico no Aeroporto Eduardo Gomes em Manaus – precisão e confiabilidade em projetos de infraestrutura aeroportuária.
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://s3.joaojordaoia.shop/ivar/AEROPORTO%20EDUARDO%20GOMES.JPG" alt="Aeroporto Eduardo Gomes">
+                        <div class="carousel-caption">
+                            Projeto de Topografia no Aeroporto Eduardo Gomes – mapeamento detalhado para expansão e modernização das instalações.
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://s3.joaojordaoia.shop/ivar/AZULAO.jpg" alt="Projeto Azulão">
+                        <div class="carousel-caption">
+                            Georreferenciamento e Topografia no Projeto Azulão – regularização e mapeamento de grandes áreas com precisão técnica.
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://s3.joaojordaoia.shop/ivar/AZUL%C3%83O%2002.JPG" alt="Projeto Azulão 02">
+                        <div class="carousel-caption">
+                            Continuidade do Projeto Azulão – terraplanagem e drenagem executadas com excelência em engenharia.
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://s3.joaojordaoia.shop/ivar/U.T.E%20Manaus.jpeg" alt="UTE Manaus">
+                        <div class="carousel-caption">
+                            Levantamento Topográfico na UTE Manaus – projeto de infraestrutura energética com alta precisão técnica.
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-nav carousel-prev" onclick="changeSlide(-1)" aria-label="Slide anterior">‹</button>
+                <button class="carousel-nav carousel-next" onclick="changeSlide(1)" aria-label="Próximo slide">›</button>
+            </div>
+            <div class="carousel-dots">
+                <button class="carousel-dot active" onclick="currentSlide(1)" aria-label="Slide 1"></button>
+                <button class="carousel-dot" onclick="currentSlide(2)" aria-label="Slide 2"></button>
+                <button class="carousel-dot" onclick="currentSlide(3)" aria-label="Slide 3"></button>
+                <button class="carousel-dot" onclick="currentSlide(4)" aria-label="Slide 4"></button>
+                <button class="carousel-dot" onclick="currentSlide(5)" aria-label="Slide 5"></button>
+            </div>
+            <div class="portfolio-cta fade-in">
+                <a href="https://wa.me/5531995968189?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento." class="cta-primary">Ver Mais Projetos ➜</a>
+            </div>
+        </div>
+    </section>
+
+     <!-- Credibility Logos -->
+    <section class="credibility section">
+        <div class="container">
+            <h3 class="credibility-title fade-in">Nossos Clientes</h3>
+            <div class="logos-carousel">
+                <div class="logos-track" id="logosTrack">
+                    <div class="logo-item">
+                        <img src="https://s3.joaojordaoia.shop/ivar/6.jpg" alt="Cliente 6">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://s3.joaojordaoia.shop/ivar/5.jpg" alt="Cliente 5">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://s3.joaojordaoia.shop/ivar/4.jpg" alt="Cliente 4">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://s3.joaojordaoia.shop/ivar/3.jpg" alt="Cliente 3">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://s3.joaojordaoia.shop/ivar/2.jpg" alt="Cliente 2">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://s3.joaojordaoia.shop/ivar/1.jpg" alt="Cliente 1">
+                    </div>
+                    <!-- Duplicados para efeito infinito -->
+                    <div class="logo-item">
+                        <img src="https://s3.joaojordaoia.shop/ivar/6.jpg" alt="Cliente 6">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://s3.joaojordaoia.shop/ivar/5.jpg" alt="Cliente 5">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://s3.joaojordaoia.shop/ivar/4.jpg" alt="Cliente 4">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://s3.joaojordaoia.shop/ivar/3.jpg" alt="Cliente 3">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://s3.joaojordaoia.shop/ivar/2.jpg" alt="Cliente 2">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://s3.joaojordaoia.shop/ivar/1.jpg" alt="Cliente 1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials section-lg">
+        <div class="container">
+            <h2 class="section-title fade-in">O Que Nossos Clientes Dizem</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial fade-in">
+                    <p class="testimonial-text">A Trena Amazonas executou o georreferenciamento da nossa propriedade com extrema precisão. Profissionalismo exemplar e entrega dentro do prazo acordado.</p>
+                    <div class="testimonial-author">Maria Silva - Proprietária Rural</div>
+                </div>
+                <div class="testimonial fade-in">
+                    <p class="testimonial-text">Excelente trabalho no levantamento topográfico do nosso loteamento. Equipe técnica altamente qualificada e equipamentos de última geração.</p>
+                    <div class="testimonial-author">João Santos - Engenheiro Civil</div>
+                </div>
+                <div class="testimonial fade-in">
+                    <p class="testimonial-text">Recomendo os serviços da Trena Amazonas. Conseguiram resolver questões complexas de drenagem com soluções inovadoras e eficientes.</p>
+                    <div class="testimonial-author">Ana Costa - Arquiteta</div>
+                </div>
+            </div>
+            <div class="testimonials-cta fade-in">
+                <a href="https://wa.me/5531995968189?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento." class="cta-primary">Seja Nosso Próximo Cliente ➜</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq section-lg">
+        <div class="faq-container">
+            <h2 class="section-title fade-in">Perguntas Frequentes</h2>
+            <div class="faq-item fade-in">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    Qual o prazo para execução de um levantamento topográfico?
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>O prazo varia conforme a complexidade e tamanho da área, mas geralmente entre 5 a 15 dias úteis para áreas urbanas pequenas e médias. Projetos maiores podem levar até 30 dias.</p>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    Vocês atendem em todo o estado do Amazonas?
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Sim, atendemos em todo o estado do Amazonas e demais estados da região Norte. Para projetos em locais mais distantes, fazemos um planejamento logístico adequado.</p>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    Quais documentos são necessários para o georreferenciamento?
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>São necessários: escritura do imóvel, certidão de matrícula atualizada, CPF/CNPJ do proprietário, e documentos específicos dependendo da situação legal do imóvel.</p>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    O levantamento é válido para aprovação na Prefeitura?
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Sim, todos os nossos levantamentos seguem as normas técnicas brasileiras e são aceitos pelos órgãos competentes, incluindo prefeituras, INCRA e cartórios.</p>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    Vocês oferecem garantia nos serviços executados?
+                    <span class="faq-icon">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Oferecemos garantia de 12 meses em todos os nossos serviços. Caso seja necessária alguma correção ou ajuste, realizamos sem custos adicionais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CONTATO - Final CTA -->
+    <section class="final-cta section-lg" id="contato">
+        <div class="container">
+            <div class="final-cta-container">
+                <h2>Garanta a Precisão do Seu Projeto Hoje</h2>
+                <p>Entre em contato conosco e receba um orçamento personalizado para suas necessidades de topografia e georreferenciamento.</p>
+                <a href="https://wa.me/5531995968189?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento." class="cta-primary">Solicitar Orçamento Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-logo">Trena Amazonas LTDA</div>
+                <div class="footer-copyright">
+                    © 2025 Trena Amazonas LTDA. Todos os direitos reservados. | 
+                    <a href="#" class="privacy-link" onclick="openPrivacyPolicy()">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Política de Privacidade Modal -->
+    <div class="privacy-modal" id="privacyModal">
+        <div class="privacy-content">
+            <div class="privacy-header">
+                <h1>Política de Privacidade</h1>
+                <button class="privacy-close" onclick="closePrivacyPolicy()">&times;</button>
+            </div>
+            <div class="privacy-body">
+                <div class="privacy-section">
+                    <h2>1. Coleta de Informações</h2>
+                    <p>Podemos coletar os seguintes tipos de informações:</p>
+                    <ul>
+                        <li>Informações fornecidas voluntariamente pelo usuário (nome, e-mail, telefone, empresa, mensagens de contato).</li>
+                        <li>Informações de navegação em nosso site (endereço IP, tipo de navegador, páginas acessadas e tempo de visita).</li>
+                        <li>Informações provenientes de cookies e tecnologias similares.</li>
+                    </ul>
+                </div>
+                
+                <div class="privacy-section">
+                    <h2>2. Uso das Informações</h2>
+                    <p>As informações coletadas podem ser utilizadas para:</p>
+                    <ul>
+                        <li>Responder solicitações e pedidos de orçamento.</li>
+                        <li>Enviar comunicações institucionais e comerciais (quando autorizado).</li>
+                        <li>Melhorar a experiência do usuário em nosso site.</li>
+                        <li>Cumprir obrigações legais e regulatórias.</li>
+                    </ul>
+                </div>
+                
+                <div class="privacy-section">
+                    <h2>3. Direitos do Usuário</h2>
+                    <p>De acordo com a LGPD, o usuário tem direito de:</p>
+                    <ul>
+                        <li>Confirmar a existência de tratamento de dados pessoais.</li>
+                        <li>Acessar, corrigir ou atualizar seus dados.</li>
+                        <li>Solicitar anonimização, bloqueio ou exclusão de dados desnecessários.</li>
+                        <li>Revogar consentimento previamente concedido.</li>
+                    </ul>
+                </div>
+                
+                <div class="privacy-section">
+                    <h2>4. Contato</h2>
+                    <p>Para esclarecimentos sobre esta Política:</p>
+                    <p>📧 E-mail: contato@trenaamazonas.com.br</p>
+                    <p>📞 Telefone: (92) 99999-9999</p>
+                    <p>📌 Última atualização: Janeiro de 2025</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Schema for FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Qual o prazo para execução de um levantamento topográfico?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "O prazo varia conforme a complexidade e tamanho da área, mas geralmente entre 5 a 15 dias úteis para áreas urbanas pequenas e médias. Projetos maiores podem levar até 30 dias."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Vocês atendem em todo o estado do Amazonas?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sim, atendemos em todo o estado do Amazonas e demais estados da região Norte. Para projetos em locais mais distantes, fazemos um planejamento logístico adequado."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <script>
+        // Mobile Menu Functions
+        function openMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const mobileOverlay = document.getElementById('mobileOverlay');
+            const mobileMenuBtn = document.querySelector('.mobile-menu');
+            
+            mobileNav.classList.add('active');
+            mobileOverlay.classList.add('active');
+            mobileMenuBtn.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const mobileOverlay = document.getElementById('mobileOverlay');
+            const mobileMenuBtn = document.querySelector('.mobile-menu');
+            
+            mobileNav.classList.remove('active');
+            mobileOverlay.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Portfolio Carousel
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const totalSlides = slides.length;
+        let autoSlideInterval;
+
+        function updateCarousel() {
+            const track = document.getElementById('carouselTrack');
+            track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+            
+            // Update dots
+            document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlideIndex);
+            });
+        }
+
+        function changeSlide(direction) {
+            currentSlideIndex += direction;
+            if (currentSlideIndex >= totalSlides) currentSlideIndex = 0;
+            if (currentSlideIndex < 0) currentSlideIndex = totalSlides - 1;
+            updateCarousel();
+            resetAutoSlide();
+        }
+
+        function currentSlide(index) {
+            currentSlideIndex = index - 1;
+            updateCarousel();
+            resetAutoSlide();
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+                changeSlide(1);
+            }, 5000);
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        }
+
+        // FAQ Toggle
+        function toggleFAQ(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('.faq-icon');
+            const isActive = answer.classList.contains('active');
+            
+            // Close all FAQ items
+            document.querySelectorAll('.faq-answer').forEach(item => {
+                item.classList.remove('active');
+            });
+            document.querySelectorAll('.faq-icon').forEach(icon => {
+                icon.classList.remove('active');
+            });
+            
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                answer.classList.add('active');
+                icon.classList.add('active');
+            }
+        }
+
+        // Privacy Policy Modal
+        function openPrivacyPolicy() {
+            const modal = document.getElementById('privacyModal');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePrivacyPolicy() {
+            const modal = document.getElementById('privacyModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.addEventListener('click', function(e) {
+            const modal = document.getElementById('privacyModal');
+            if (e.target === modal) {
+                closePrivacyPolicy();
+            }
+        });
+
+        // Close modal with ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const modal = document.getElementById('privacyModal');
+                if (modal.classList.contains('active')) {
+                    closePrivacyPolicy();
+                }
+                if (document.getElementById('mobileNav').classList.contains('active')) {
+                    closeMobileMenu();
+                }
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            startAutoSlide();
+            
+            // Initialize fade-in animations
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => observer.observe(el));
+
+            // Pause logos animation on hover
+            const carousel = document.querySelector('.logos-carousel');
+            const track = document.querySelector('.logos-track');
+            
+            if (carousel && track) {
+                carousel.addEventListener('mouseenter', () => {
+                    track.style.animationPlayState = 'paused';
+                });
+                
+                carousel.addEventListener('mouseleave', () => {
+                    track.style.animationPlayState = 'running';
+                });
+            }
+        });
+
+        // Touch events for mobile carousel
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        const carouselElement = document.querySelector('.portfolio-carousel');
+        if (carouselElement) {
+            carouselElement.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+
+            carouselElement.addEventListener('touchend', function(e) {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                const diff = touchStartX - touchEndX;
+                
+                if (Math.abs(diff) > swipeThreshold) {
+                    if (diff > 0) {
+                        changeSlide(1); // Swipe left - next slide
+                    } else {
+                        changeSlide(-1); // Swipe right - previous slide
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
