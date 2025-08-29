@@ -472,7 +472,8 @@
             text-align: center;
         }
 
-        .quem-somos-main-image {
+        .quem-somos-carousel {
+            position: relative;
             width: 100%;
             max-width: 500px;
             height: 400px;
@@ -482,10 +483,77 @@
             margin: 2rem auto 0;
         }
 
-        .quem-somos-main-image img {
+        .quem-somos-track {
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 100%;
+        }
+
+        .quem-somos-slide {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .quem-somos-slide img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        .quem-somos-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.3);
+            border: none;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            color: rgba(0,0,0,0.6);
+            opacity: 0.7;
+        }
+
+        .quem-somos-nav:hover {
+            background: rgba(255,255,255,0.6);
+            opacity: 1;
+            color: rgba(0,0,0,0.8);
+        }
+
+        .quem-somos-prev {
+            left: 15px;
+        }
+
+        .quem-somos-next {
+            right: 15px;
+        }
+
+        .quem-somos-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .quem-somos-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--border-light);
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .quem-somos-dot.active {
+            background: var(--primary-green);
         }
 
         .quem-somos-card {
@@ -1269,6 +1337,20 @@
                 padding: 2rem;
                 font-size: 1rem;
             }
+
+            .quem-somos-nav {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+
+            .quem-somos-prev {
+                left: 20px;
+            }
+
+            .quem-somos-next {
+                right: 20px;
+            }
         }
 
         /* Desktop */
@@ -1325,7 +1407,7 @@
                 order: 1;
             }
 
-            .quem-somos-main-image {
+            .quem-somos-carousel {
                 margin-top: 0;
             }
 
@@ -1487,8 +1569,29 @@
             <h2 class="section-title fade-in">Quem Somos</h2>
             <div class="quem-somos-content">
                 <div class="quem-somos-image-container">
-                    <div class="quem-somos-main-image fade-in">
-                        <img src="https://s3.joaojordaoia.shop/ivar/IMG-20220115-WA0063%20%281%29.jpg" alt="Trena Amazonas - 25+ Anos de Experiência">
+                    <div class="quem-somos-carousel fade-in">
+                        <div class="quem-somos-track" id="quemSomosTrack">
+                            <div class="quem-somos-slide">
+                                <img src="https://s3.joaojordaoia.shop/ivar/IMG-20220115-WA0063%20%281%29.jpg" alt="Trena Amazonas - 25+ Anos de Experiência">
+                            </div>
+                            <div class="quem-somos-slide">
+                                <img src="https://s3.joaojordaoia.shop/ivar/EQUIPE%20para%20levantamento%20de%20grandes%20areas.jpg" alt="Equipe para Levantamento de Grandes Áreas">
+                            </div>
+                            <div class="quem-somos-slide">
+                                <img src="https://s3.joaojordaoia.shop/ivar/IMG-20220117-WA0003.jpg" alt="Equipe de Campo Especializada">
+                            </div>
+                            <div class="quem-somos-slide">
+                                <img src="https://s3.joaojordaoia.shop/ivar/equipe%20de%20montagem%20industrial.jpeg" alt="Equipe de Montagem Industrial">
+                            </div>
+                        </div>
+                        <button class="quem-somos-nav quem-somos-prev" onclick="changeQuemSomosSlide(-1)" aria-label="Imagem anterior">‹</button>
+                        <button class="quem-somos-nav quem-somos-next" onclick="changeQuemSomosSlide(1)" aria-label="Próxima imagem">›</button>
+                    </div>
+                    <div class="quem-somos-dots">
+                        <button class="quem-somos-dot active" onclick="currentQuemSomosSlide(1)" aria-label="Imagem 1"></button>
+                        <button class="quem-somos-dot" onclick="currentQuemSomosSlide(2)" aria-label="Imagem 2"></button>
+                        <button class="quem-somos-dot" onclick="currentQuemSomosSlide(3)" aria-label="Imagem 3"></button>
+                        <button class="quem-somos-dot" onclick="currentQuemSomosSlide(4)" aria-label="Imagem 4"></button>
                     </div>
                 </div>
                 <div class="quem-somos-text">
@@ -1966,6 +2069,35 @@
             startAutoSlide();
         }
 
+        // Quem Somos Carousel
+        let currentQuemSomosIndex = 0;
+        const quemSomosSlides = document.querySelectorAll('.quem-somos-slide');
+        const totalQuemSomosSlides = quemSomosSlides.length;
+
+        function updateQuemSomosCarousel() {
+            const track = document.getElementById('quemSomosTrack');
+            if (track) {
+                track.style.transform = `translateX(-${currentQuemSomosIndex * 100}%)`;
+                
+                // Update dots
+                document.querySelectorAll('.quem-somos-dot').forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentQuemSomosIndex);
+                });
+            }
+        }
+
+        function changeQuemSomosSlide(direction) {
+            currentQuemSomosIndex += direction;
+            if (currentQuemSomosIndex >= totalQuemSomosSlides) currentQuemSomosIndex = 0;
+            if (currentQuemSomosIndex < 0) currentQuemSomosIndex = totalQuemSomosSlides - 1;
+            updateQuemSomosCarousel();
+        }
+
+        function currentQuemSomosSlide(index) {
+            currentQuemSomosIndex = index - 1;
+            updateQuemSomosCarousel();
+        }
+
         // FAQ Toggle
         function toggleFAQ(button) {
             const answer = button.nextElementSibling;
@@ -2082,6 +2214,32 @@
                         changeSlide(1); // Swipe left - next slide
                     } else {
                         changeSlide(-1); // Swipe right - previous slide
+                    }
+                }
+            }
+        }
+
+        // Touch events for Quem Somos carousel
+        const quemSomosCarouselElement = document.querySelector('.quem-somos-carousel');
+        if (quemSomosCarouselElement) {
+            quemSomosCarouselElement.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+
+            quemSomosCarouselElement.addEventListener('touchend', function(e) {
+                touchEndX = e.changedTouches[0].screenX;
+                handleQuemSomosSwipe();
+            });
+
+            function handleQuemSomosSwipe() {
+                const swipeThreshold = 50;
+                const diff = touchStartX - touchEndX;
+                
+                if (Math.abs(diff) > swipeThreshold) {
+                    if (diff > 0) {
+                        changeQuemSomosSlide(1); // Swipe left - next slide
+                    } else {
+                        changeQuemSomosSlide(-1); // Swipe right - previous slide
                     }
                 }
             }
